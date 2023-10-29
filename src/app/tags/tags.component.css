@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    background-color: chocolate;
+    padding: 10px;
+    border-radius: 9px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 4px solid rgb(6, 6, 39)
+}
+
+a {
+    text-decoration: none;
+    color: rgb(6, 6, 54);
+    font-weight: bold;
+    font-size: larger;
+}

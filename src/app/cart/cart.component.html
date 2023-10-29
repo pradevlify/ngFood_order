@@ -1,0 +1,43 @@
+<table class="table-responsive container">
+  <thead>
+    <tr>
+      <th>index</th>
+      <th>Name</th>
+      <th>Image</th>
+      <th>price</th>
+      <th>delete btn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let v of product; index as i">
+      <td>{{ i + 1 }}</td>
+      <td>{{ v.name }}</td>
+      <td>
+        <img
+          src="{{ v.imageUrl }}"
+          alt=""
+          style="height: 100px; width: 100px; border-radius: 50px"
+        />
+      </td>
+      <td>
+        {{ v.price | currency : "USD" }}
+      </td>
+      <td>
+        <button class="btn btn-danger" (click)="removeItem(v)">delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button (click)="removeAll()" class="btn btn-danger">empty cart</button>
+      </td>
+      <td></td>
+      <td>
+        <strong>grandTotal:{{ grandtotal | currency : "USD" }}</strong>
+      </td>
+      <td routerLink="">
+        <button class="btn btn-primary">shop more</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

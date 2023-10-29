@@ -1,0 +1,24 @@
+.containe {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #1c1c7b;
+    align-items: center;
+    position: sticky;
+    top: 10px
+}
+
+.logo {
+    color: white
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    align-self: center;
+    font-size: larger;
+}
+
+ul {
+    list-style-type: none;
+}

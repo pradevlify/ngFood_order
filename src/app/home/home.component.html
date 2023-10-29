@@ -1,0 +1,30 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<ul>
+  <li class="container product-li">
+    <div *ngFor="let i of foods" class="box">
+      <a> <img src="{{ i.imageUrl }}" alt="" height="200px" width="250px" /></a>
+      <div class="content">
+        <div class="name">
+          {{ i.name }}
+        </div>
+        <div class="product-item-footer">
+          <div class="origins">
+            <span> origins:[{{ i.origins }}]</span>
+          </div>
+        </div>
+        <div class="cook-time">
+          <i class="fa-solid fa-clock"></i> {{ i.cooktime }}
+        </div>
+        <div class="food-price">
+          {{ i.price | currency : "USD" }}
+        </div>
+        <div>
+          <button class="btn btn-danger" (click)="addtocart(i)">
+            add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
